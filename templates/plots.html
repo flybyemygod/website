@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Datu vizualizācija</title>
+    <script>
+        function showPlot() {
+            var selectedPlot = document.getElementById("plotSelector").value;
+            var plots = document.getElementsByClassName("plot-image");
+
+            for (var i = 0; i < plots.length; i++) {
+                plots[i].style.display = "none";
+            }
+
+            document.getElementById(selectedPlot).style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Studentu datu vizualizācija</h1>
+        
+        <label for="plotSelector">Izvēlēties vizualizāciju:</label>
+        <select id="plotSelector" onchange="showPlot()">
+            <option value="histogram">Atzīmju sadalījums</option>
+            <option value="scatter">Macību stundas pret atzīmem</option>
+            <option value="boxplot">Atzīmju sadalījums pēc priekšmeta</option>
+            <option value="bar_chart">Vidējais vērtējums par priekšmetu</option>
+        </select>
+
+        <div class="content">
+            <div class="plot-container">
+                <img id="histogram" class="plot-image" src="../static/plots/histogram.png" alt="Atzīmju sadalījums" style="display:block;">
+                <img id="scatter" class="plot-image" src="../static/plots/scatter.png" alt="Macību stundas pret atzīmem" style="display:none;">
+                <img id="boxplot" class="plot-image" src="../static/plots/boxplot.png" alt="Atzīmju sadalījums pēc priekšmeta" style="display:none;">
+                <img id="bar_chart" class="plot-image" src="../static/plots/bar_chart.png" alt="Vidējais vērtējums par priekšmetu" style="display:none;">
+            </div>
+
+            <div class="table-container">
+                <h2>5 labākie skolēni pēc vertējumiem</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vārds</th>
+                            <th>Vertējums</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student in top_students %}
+                            <tr>
+                                <td>{{ student.name }}</td>
+                                <td>{{ student.grade }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <a href="/">Atpakaļ uz sākumlapu</a>
+    </div>
+</body>
+</html>

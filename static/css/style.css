@@ -1,0 +1,216 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column; /* Ensures vertical stacking of elements */
+}
+
+/* Container for center alignment */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Align text to the left inside the container */
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Links Styling */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #1abc9c;
+    transform: scale(1.1);
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="file"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input[type="file"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Select Dropdown */
+select {
+    padding: 12px;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    width: 60%; /* Adjusted width to 60% */
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+label {
+    font-size: 1.5rem;
+}
+
+/* Plot Display Styling */
+.plot-image {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex Layout for Plot and Table */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px; /* Space between the image and table */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Table Styling */
+.table-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+    width: 65%; /* Adjusted width to make the table wider */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+    font-size: 1.2rem;
+}
+
+td {
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Back Link */
+a[href$="home"] {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 1.3rem;
+    background-color: #e74c3c;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a[href$="home"]:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
